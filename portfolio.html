@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - By Design Home Remodeling</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('nav');
+            nav.classList.toggle('show');
+        }
+    </script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header { background: #333; color: #fff; padding: 1rem; display: flex; justify-content: space-between; align-items: center; }
+        .hamburger { display: none; cursor: pointer; }
+        nav { display: flex; }
+        nav a { color: white; padding: 0 15px; text-decoration: none; }
+        @media (max-width: 600px) {
+            nav { display: none; flex-direction: column; }
+            .hamburger { display: block; }
+            nav.show { display: flex; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>By Design Home Remodeling</h1>
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776;
+        </div>
+        <nav id="nav">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We are dedicated to providing the best home remodeling services.</p>
+        </section>
+        <section id="services">
+            <h2>Our Services</h2>
+            <p>We offer kitchen and bath remodels, interior and exterior renovations, and more.</p>
+        </section>
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <p>Check out our previous projects!</p>
+            <!-- Images can be added here -->
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email us at contact@bydesign.com</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 By Design Home Remodeling</p>
+    </footer>
+</body>
+</html>
